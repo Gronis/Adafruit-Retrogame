@@ -91,16 +91,23 @@ struct {
 	// This pin/key table is used if an Adafruit PiTFT display
 	// is detected (e.g. Cupcade or PiGRRL).
 	// Input   Output (from /usr/include/linux/input.h)
-	{   2,     KEY_LEFT     },   // Joystick (4 pins)
-	{   3,     KEY_RIGHT    },
-	{   4,     KEY_DOWN     },
-	{  17,     KEY_UP       },
-	{  27,     KEY_Z        },   // A/Fire/jump/primary
-	{  22,     KEY_X        },   // B/Bomb/secondary
-	{  23,     KEY_R        },   // Credit
-	{  18,     KEY_Q        },   // Start 1P
-	{  -1,     -1           } }, // END OF LIST, DO NOT CHANGE
-	// MAME must be configured with 'z' & 'x' as buttons 1 & 2 -
+        {   4,     KEY_LEFT         },   // Joystick (4 pins)
+        {  17,     KEY_RIGHT        },
+        {  18,     KEY_DOWN         },
+        {  21,     KEY_UP           },
+        {  22,     KEY_X            },   //A
+        {  23,     KEY_Z            },   //B
+        {  24,     KEY_S            },   //X
+        {  10,     KEY_A            },   //Y
+        {   9,     KEY_Q            },   //L
+        {  25,     KEY_W            },   //R
+        {   7,     KEY_ENTER        },   // Start
+        {  11,     KEY_RIGHTSHIFT   },   // Select
+        {   8,     KEY_F1           },   // Menu Toggle
+        {  -1,     -1               } }, // END OF LIST, DO NOT CHANGE
+	//Pin 7 for On/Off Signal
+
+        // MAME must be configured with 'z' & 'x' as buttons 1 & 2 -
 	// this was required for the accompanying 'menu' utility to
 	// work (catching crtl/alt w/ncurses gets totally NASTY).
 	// Credit/start are likewise moved to 'r' & 'q,' reason being
@@ -113,14 +120,20 @@ struct {
 	// (using HDMI or composite instead), as with our original
 	// retro gaming guide.
 	// Input   Output (from /usr/include/linux/input.h)
-	{  25,     KEY_LEFT     },   // Joystick (4 pins)
-	{   9,     KEY_RIGHT    },
-	{  10,     KEY_UP       },
-	{  17,     KEY_DOWN     },
-	{  23,     KEY_LEFTCTRL },   // A/Fire/jump/primary
-	{   7,     KEY_LEFTALT  },   // B/Bomb/secondary
-	// For credit/start/etc., use USB keyboard or add more buttons.
-	{  -1,     -1           } }; // END OF LIST, DO NOT CHANGE
+	{   4,     KEY_LEFT         },   // Joystick (4 pins)
+        {  17,     KEY_RIGHT        },
+        {  18,     KEY_DOWN         },
+        {  21,     KEY_UP           },
+        {  22,     KEY_X            },   //A
+        {  23,     KEY_Z            },   //B
+        {  24,     KEY_S            },   //X
+        {  10,     KEY_A            },   //Y
+        {   9,     KEY_Q            },   //L
+        {  25,     KEY_W            },   //R
+        {   7,     KEY_ENTER        },   // Start
+        {  11,     KEY_RIGHTSHIFT   },   // Select
+        {   8,     KEY_F1           },   // Menu Toggle
+	{  -1,     -1               } }; // END OF LIST, DO NOT CHANGE
 
 // A "Vulcan nerve pinch" (holding down a specific button combination
 // for a few seconds) issues an 'esc' keypress to MAME (which brings up
