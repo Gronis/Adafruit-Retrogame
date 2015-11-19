@@ -19,7 +19,6 @@ power=1
 while [ $power != 0 ]; do
 	sleep 1
 	power=$(cat /sys/class/gpio/gpio$GPIOpin1/value)
-fi
 sleep 1
 poweroff
 done' > /storage/.config/switch.sh
